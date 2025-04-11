@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | ITC</title>
+
+  <!-- Importing Fonts: Markazi Text (Medium) and Khula (Regular) -->
+  <link href="https://fonts.googleapis.com/css2?family=Khula&family=Markazi+Text:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+    /* Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Khula', sans-serif;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://i.pinimg.com/736x/8b/b4/58/8bb4584888767e0250ee524027fd6e53.jpg') no-repeat center center/cover;
+      color: white;
+      min-height: 100vh;
+      padding-top: 120px;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 40px;
+      z-index: 1000;
+    }
+
+    header img {
+      height: 60px;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 30px;
+      text-decoration: none;
+      font-size: 20px;
+      font-family: 'Khula', sans-serif;
+    }
+
+    .contact-container {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 500px;
+      margin: 0 auto;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 36px;
+      font-family: 'Markazi Text', serif;
+      text-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+    }
+
+    input:focus, textarea:focus {
+      outline: 2px solid #00ffff;
+    }
+
+    button {
+      padding: 12px;
+      background-color: #00bcd4;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #515127;
+    }
+
+    .footer {
+      margin-top: 40px;
+      text-align: center;
+      font-family: 'Markazi Text', serif;
+    }
+
+    .footer h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .social-icons {
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      color: white;
+      font-size: 28px;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        font-size: 16px;
+        margin-left: 15px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .footer h2 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://drive.google.com/file/d/1oBwUs2qljggT9cS0ZA3p1MOdUsbys8UJ/view?usp=sharing" alt="ITC Logo">
+    <nav>
+      <a href="#">HOME</a>
+      <a href="#">ABOUT</a>
+      <a href="#">EVENTS</a>
+      <a href="#">CONTACT</a>
+    </nav>
+  </header>
+
+  <div class="contact-container">
+    <h1>Feel free to reach out anytime !!</h1>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <div class="footer">
+    <h2>CONNECT WITH US</h2>
+    <div class="social-icons">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+
+  <script>
+    
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      console.log('Form Submitted:', { name, email, message });
+      alert('Thanks for reaching out!');
+      this.reset();
+    });
+  </script>
+</body>
+</html>

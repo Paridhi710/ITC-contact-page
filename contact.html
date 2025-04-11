@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | ITC</title>
+
+  <!-- Importing Fonts: Markazi Text (Medium) and Khula (Regular) -->
+  <link href="https://fonts.googleapis.com/css2?family=Khula&family=Markazi+Text:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+ <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <header>
+    <img src="https://drive.google.com/file/d/1oBwUs2qljggT9cS0ZA3p1MOdUsbys8UJ/view?usp=sharing" alt="ITC Logo">
+    <nav>
+      <a href="#">HOME</a>
+      <a href="#">ABOUT</a>
+      <a href="#">EVENTS</a>
+      <a href="#">CONTACT</a>
+    </nav>
+  </header>
+
+  <div class="contact-container" style="text-align: center;">
+  <h1>Feel free to reach out anytime !!</h1>
+  <p style="font-size: 20px; margin-top: 20px;">
+  </p>
+</div>
+
+  <div class="footer">
+    <h2>CONNECT WITH US</h2>
+    <div class="social-icons">
+  <a href="https://www.facebook.com/tech.iitb" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+  <a href="https://www.instagram.com/tech.iitb" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+  <a href="https://twitter.com/tech_iitb" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+  <a href="mailto:gsectech@iitb.ac.in" aria-label="Email"><i class="fas fa-envelope"></i></a>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSeccXyMthmzMRJF8Kv80z18lDgzRmhkY9fdcF91zcKWyiTQFw/viewform?usp=header" target="_blank" aria-label="Google Form" style="font-size: 28px; margin: 0 10px; text-decoration: none; color: white;">
+    🔗
+  </a>
+    
+  </div>
+
+  <script>
+    
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      console.log('Form Submitted:', { name, email, message });
+      alert('Thanks for reaching out!');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
+
